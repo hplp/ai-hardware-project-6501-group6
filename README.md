@@ -4,12 +4,12 @@
 # Hello World!
 
 ## Team Name: 
-(Enter your team name from Canvas)
+Group 6
 
 ## Team Members:
-- Student 1
-- Student 2
-- Student 3
+- Peilin Chen
+- Xinyuan Fu
+- Hanyuan Gao
 
 ## Project Title:
 (Enter your project title - be creative)
