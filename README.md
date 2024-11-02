@@ -30,7 +30,9 @@ Quantize large language model into low-bit and deploy it on edge device.
 (List the hardware platform, software tools, language(s), etc. you plan to use)
 
 Hardware platoform: Jetson Nano.
+
 Software tools: Pytorch and Ubuntu.
+
 Language: Python.
 
 ## Expected Outcomes:
