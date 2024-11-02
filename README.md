@@ -13,20 +13,36 @@
 
 ## Project Title:
 (Enter your project title - be creative)
+Espresso Language Model Deployed on Jetson Nano
 
 ## Project Description:
 (Provide a short description of the problem you're addressing)
+Quantize large language model into low-bit and deploy it on edge device. 
 
 ## Key Objectives:
-- Objective 1
-- Objective 2
-- Objective 3
+- Quantization
+- Deployment
+- Demonstrate the effective of our quantization method
 
 ## Technology Stack:
 (List the hardware platform, software tools, language(s), etc. you plan to use)
+Hardware platoform: Jetson Nano.
+Software tools: Pytorch and Ubuntu.
+Language: Python.
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
+Successfully deploy the quantized large language model on Jetson Nano edge device. Comparing the result and performance between with and without quantization, demonstrate the effective of our quantization method on language model deployed on tinyML.
 
 ## Timeline:
 (Provide a rough timeline or milestones for the project)
+Week 1 (2024.11.04-2024.11.11): Proposal and presentation, review and modify the topic.
+
+Week 2 (2024.11.11-2024.11.18): 
+
+Week 3 (2024.11.18-2024.11.25): 
+
+Week 4 (2024.11.25-2024.12.02):
+
+Week 5 (2024.12.02-2024.12.09):Final demonstration and submit the report
+
