@@ -41,7 +41,7 @@ Successfully deploy the quantized large language model on Jetson Nano edge devic
 ## Timeline:
 (Provide a rough timeline or milestones for the project)
 
-Week 1 (2024.11.04-2024.11.11): Proposal and presentation, review and modify the topic.
+Week 1 (2024.11.04-2024.11.11): Proposal and presentation, review, and modify the topic.
 
 Week 2 (2024.11.11-2024.11.18): TBD.
 
