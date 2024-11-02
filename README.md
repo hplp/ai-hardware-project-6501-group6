@@ -12,12 +12,12 @@
 ## Project Title:
 (Enter your project title - be creative)
 
-Espresso Language Model Deployed on Jetson Nano
+Espresso Language Language Model Deployed on Jetson Nano
 
 ## Project Description:
 (Provide a short description of the problem you're addressing)
 
-Quantize large language model into low-bit and deploy it on edge device. 
+Quantize large language model into low-bit and deploy it on edge device Jetson Nano. 
 
 ## Key Objectives:
 - Quantization
