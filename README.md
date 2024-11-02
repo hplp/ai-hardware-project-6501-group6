@@ -12,31 +12,32 @@
 ## Project Title:
 (Enter your project title - be creative)
 
-Espresso Language Language Model Deployed on Jetson Nano
+Design Space Exploration for Compressed Deep Convolutional Neural Network on SCALE Sim
 
 ## Project Description:
 (Provide a short description of the problem you're addressing)
 
-Quantize large language model into low-bit and deploy it on edge device Jetson Nano. 
+Quantize Convolutional layer and feedforward layer into low-bit like int8, int4, and int2 and deploy it on the open source platform Systolic CNN AcceLErator Simulator (SCALE Sim). 
 
 ## Key Objectives:
-- Quantization
+- Quantize convolutional layer and feedforward layer
 - Deployment
+- Design space exploration
 - Demonstrate the effective of our quantization method
 
 ## Technology Stack:
 (List the hardware platform, software tools, language(s), etc. you plan to use)
 
-Hardware platoform: Jetson Nano.
+Hardware platoform: Systolic CNN AcceLErator Simulator (SCALE Sim).
 
-Software tools: Pytorch and Ubuntu.
+Software tools: Pytorch, Ubuntu, and SCALE Sim.
 
-Language: Python.
+Language: Python, shell.
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
 
-Successfully deploy the quantized large language model on Jetson Nano edge device. Comparing the result and performance between with and without quantization, demonstrate the effective of our quantization method on language model deployed on tinyML.
+Successfully deploy the quantized Convolutional Neural Network on Open source platform SCALE Sim. Given a CNN layer, conduction design space exploration (DSE) for hardware archiecture parameters. Comparing the result and performance between with and without quantization, demonstrate the effective of our quantization and DSE mothod.
 
 ## Timeline:
 (Provide a rough timeline or milestones for the project)
