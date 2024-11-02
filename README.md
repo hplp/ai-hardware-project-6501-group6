@@ -4,7 +4,7 @@
 # Hello World!
 
 ## Team Name: 
-Group 6
+6501-Group 6
 
 ## Team Members:
 - Peilin Chen
