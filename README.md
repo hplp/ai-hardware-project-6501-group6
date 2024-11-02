@@ -32,7 +32,7 @@ Hardware platoform: Systolic CNN AcceLErator Simulator (SCALE Sim).
 
 Software tools: Pytorch, Ubuntu, and SCALE Sim.
 
-Language: Python, shell.
+Language: Python, Shell.
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
