@@ -43,11 +43,11 @@ Successfully deploy the quantized large language model on Jetson Nano edge devic
 
 Week 1 (2024.11.04-2024.11.11): Proposal and presentation, review and modify the topic.
 
-Week 2 (2024.11.11-2024.11.18): 
+Week 2 (2024.11.11-2024.11.18): TBD.
 
-Week 3 (2024.11.18-2024.11.25): 
+Week 3 (2024.11.18-2024.11.25): TBD.
 
-Week 4 (2024.11.25-2024.12.02):
+Week 4 (2024.11.25-2024.12.02): TBD.
 
-Week 5 (2024.12.02-2024.12.09):Final demonstration and submit the report
+Week 5 (2024.12.02-2024.12.09): Final demonstration and submit the report.
 
