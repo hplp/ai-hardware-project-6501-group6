@@ -22,7 +22,7 @@ Quantize Convolutional layer and feedforward layer into low-bit like int8, int4,
 ## Key Objectives:
 - Quantize convolutional layer and feedforward layer
 - Design space exploration
-- Depoly the quantized model onto SCALE Sim with the optimal hardware configurations and demonstrate the effectiveness of our method
+- Depoly the quantized model onto SCALE Sim with the optimal hardware configurations and show the effectiveness of our method
 
 ## Technology Stack:
 (List the hardware platform, software tools, language(s), etc. you plan to use)
@@ -36,7 +36,7 @@ Language: Python, Shell.
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
 
-Successfully deploy the quantized Convolutional Neural Network on Open source platform SCALE Sim. Given a CNN layer, conduction design space exploration (DSE) for hardware archiecture parameters. Comparing the result and performance between with and without quantization, demonstrate the effective of our quantization and DSE mothod.
+Successfully deploy the quantized Convolutional Neural Network on Open source platform SCALE Sim. Given a CNN layer, we conduct design space exploration (DSE) to find the optimal hardware architecture configuration. We will compare the performance under different optimization methods and show the effectiveness of our quantization and DSE mothods.
 
 ## Timeline:
 (Provide a rough timeline or milestones for the project)
