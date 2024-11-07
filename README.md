@@ -21,9 +21,8 @@ Quantize Convolutional layer and feedforward layer into low-bit like int8, int4,
 
 ## Key Objectives:
 - Quantize convolutional layer and feedforward layer
-- Deployment
 - Design space exploration
-- Demonstrate the effective of our quantization method
+- Depoly the quantized model onto SCALE Sim with the optimal hardware configurations and demonstrate the effectiveness of our method
 
 ## Technology Stack:
 (List the hardware platform, software tools, language(s), etc. you plan to use)
