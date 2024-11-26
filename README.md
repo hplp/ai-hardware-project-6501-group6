@@ -8,6 +8,7 @@
 - Peilin Chen
 - Xinyuan Fu
 - Hanyuan Gao
+- Feilian Dai
 
 ## Project Title:
 (Enter your project title - be creative)

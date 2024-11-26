@@ -65,9 +65,10 @@ In our case, we need to find the optimal hardware configurations (for instance t
 
 TODO: run on real simulator and try generic searching.
 
-### Xinyuan Fu:
+### Xinyuan Fu & Feilian Dai:
 
+Run some demos using Scale sim. 
 
+Scale sim provides results of total cycles, utilization and bandwidth requirement. 
 
-
-### ***:
+![scale_sim_reuslt](../figs/scale_sim_result.png)

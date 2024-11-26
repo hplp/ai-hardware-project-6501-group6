@@ -23,8 +23,10 @@ class SearchEngine:
                     self.optimal_point = parameters
                 return 
             for i in self.space[level]:
+                tmp = parameters[level]
                 parameters[level] = i
                 nestloop(n, level+1, parameters)
+                parameters[level] = tmp
         parameters = [p[0] for p in self.space]
         return nestloop(len(self.space), 0, parameters)
         
