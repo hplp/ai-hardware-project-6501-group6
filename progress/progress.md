@@ -55,8 +55,15 @@ Step 4: I test the accuracy of the quantized LeNet-5 model using the test MNIST 
 
 ### Hanyuan Gao:
 
+Finished the basic code of design space exploration(DSE).
 
+DSE is a optimization process and focuses on finding the variables/parameters producing the best metric result.
 
+The different values of variables form a `design space`. DSE is to find the optimal point in the space.
+
+In our case, we need to find the optimal hardware configurations (for instance the array size and buffer size) given a specific software (typically a neural network).
+
+TODO: run on real simulator and try generic searching.
 
 ### Xinyuan Fu:
 
