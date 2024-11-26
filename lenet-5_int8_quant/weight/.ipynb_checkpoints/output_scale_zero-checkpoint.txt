@@ -1,2 +1,0 @@
-tensor(0.0031, device='cuda:0')
-127
