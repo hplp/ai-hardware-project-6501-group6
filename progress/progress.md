@@ -1,7 +1,7 @@
 
-## Progress
+# Progress
 
-### Peilin Chen:
+## Quantziation:
 
 I have finished the workload I am responsible for (look at the lenet-5_int8_quant folder structure below). I select a typical and popular model **LeNet-5** for this project. 
 
@@ -22,7 +22,7 @@ Step 4: I test the accuracy of the quantized LeNet-5 model using the test MNIST 
 <img src="/figs/test_quant_model.jpg" alt="architecture" align="center" width="30%">
 
 
-#### lenet-5_int8_quant folder structure
+### lenet-5_int8_quant folder structure
 ```
   / lenet-5_int8_quant /
              |--- data/
@@ -53,7 +53,7 @@ Step 4: I test the accuracy of the quantized LeNet-5 model using the test MNIST 
              \--- train.py
 ```
 
-### Hanyuan Gao:
+## Hardware Configuration Optimization:
 
 Finished the basic code of design space exploration(DSE).
 
@@ -63,9 +63,25 @@ The different values of variables form a `design space`. DSE is to find the opti
 
 In our case, we need to find the optimal hardware configurations (for instance the array size and buffer size) given a specific software (typically a neural network).
 
-TODO: run on real simulator and try generic searching.
+### Brute force search
 
-### Xinyuan Fu & Feilian Dai:
+Finished the brute force searching for **array size** and **dataflow type**.
+
+> The buffer size and bandwidth is given by users, because for these parameters, the larger the better.
+> 
+> We do not focus on area and energy, because the simulator only provides the performance result.
+
+Brute force Search traverses all possible options for different parameters.
+
+- arrayheight
+- arraywidth
+- dataflow
+
+### TODO
+
+try generic searching and more complex dataflow optimization
+
+## Xinyuan Fu & Feilian Dai:
 
 Run some demos using Scale sim. 
 
