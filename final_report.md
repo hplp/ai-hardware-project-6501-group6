@@ -25,7 +25,7 @@ space exploration method.
 SCALE Sim is a simulator for systolic array based accelerators for neural network layers that use General Matrix Multiplications (GEMMs). 
 The overall architecture is shown below.
 
-<img src="/figs/scale_sim.png" alt="architecture" align="center" width="80%">
+<img src="/figs/scalesim-overview.png" alt="architecture" align="center" width="80%">
 
 SCALE Sim takes two files as input from the users. One is the hardware configuration, including systolic array height and width, input feature map (IFMAP)
 SRAM size, filter SRAM size, output feature map (OFMAP) SRAM size, and dataflow. The other is the convolutional neural network topology (workload). SCALE Sim 
