@@ -43,7 +43,7 @@ We select a typical and popular model **LeNet-5** for this project. The applicat
 
 The LeNet-5 structure is shown below.
 
-<img src="/figs/lenet5.png" alt="architecture" align="center" width="80%">
+<img src="/figs/lenet5.jpg" alt="architecture" align="center" width="80%">
 
 LeNet-5 NN has three convolutional layers (C1, C3, and C5), two pooling layers (S2 and S4), and two fully-connected layers (F6 and OUTPUT). 
 The LeNet-5 parameter size can be calculated using the formula below:
