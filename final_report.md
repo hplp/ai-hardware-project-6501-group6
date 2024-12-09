@@ -92,9 +92,9 @@ The description for the subfolder:
 We first define the LeNet-5 neural network structure using Pytorch library in net.py. Then we train the LeNet-5 NN using MNIST dataset in train.py. The training and test batch size are 32 and 1000, respectively. We use the Cross-Entropy Loss function to measure the difference between the predicted probability distribution and the true labels. The optimizer we use is the Stochastic Gradient Descent (SGD). The learning rate and momentum are 0.001 and 0.9, respectively. The total training epoch is 
 50. The training result is shown below.
 
-<img src="/figs/train_loss_and_val_loss.jpg" alt="architecture" align="center" width="50%">
+<img src="/figs/train_loss_and_val_loss.jpg" alt="architecture" align="center" width="40%">
 
-<img src="/figs/train_acc_and_val_acc.jpg" alt="architecture" align="center" width="50%">
+<img src="/figs/train_acc_and_val_acc.jpg" alt="architecture" align="center" width="40%">
 
 The first figure depicts the training loss and validation loss during the 50 training epoches. The second figure depicts the training accuracy and validation
 accuracy during the 50 training epoches. The best accuracy achieved by our trained LeNet-5 model is 98.56%.
@@ -106,7 +106,7 @@ are defined in net_quant.py. The quant.py will utilize the net_quant.py to quant
 Quantized parameters can be found in the **weight** folder. After finishing the training of LeNet-5, we can run quant.py program to quantize the model into
 8bit. Then we can run the test_quant.py program to test the accuracy of quantized model. 
 
-<img src="/figs/test_quant_model.jpg" alt="architecture" align="center" width="50%">
+<img src="/figs/test_quant_model.jpg" alt="architecture" align="center" width="40%">
 
 We test the accuracy of the quantized LeNet-5 model using the test MNIST dataset. The testing result is shown above. We can observe that compared to the original LeNet-5 model, the quantized int8 LeNet-5 model achieves no accuracy loss (even higher than the original model in floating point datatype).
 
