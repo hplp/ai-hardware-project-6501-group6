@@ -176,3 +176,9 @@ Below are the results for our model, we trained the model based on the dataset a
 <img src="/figs/Relative_Prediction_Loss.png" alt="architecture" align="center" width="40%">
 
 ## Conclusion
+
+The quantization method been proved to be effective, its accuracy keep same performance than pre-quantization, which means the model can work as expected in resource-intensive devices; The quantization also shrinked the storage of the algorithm. 
+
+The design space exploration part implements Brute Force Search with small design space; And for large design space, we provide an AI for AI hardware method (proxy model with MLP) to reduce the exploration time.
+
+The proxy model demonstrated its advantages on fast speed as well as simple structure compare with the simulator, what is more, the relative loss after training shows that this proxy model is an effective proxy.
