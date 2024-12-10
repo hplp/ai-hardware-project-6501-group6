@@ -157,7 +157,7 @@ We use an AI model to work as proxy model, regarding the type of AI model we use
 - MLP is a smooth model and a good fit for searching;
 - MLP has a simple structure and we need this characteristic to prevent overfitting;
 
-<img src="/figs/proxy_code.png" alt="architecture" align="center" width="80%">
+<img src="/figs/proxy_code.png" alt="architecture" align="center" width="40%">
 
 <img src="/figs/5_FC_Layer_MLP.png" alt="architecture" align="center" width="40%">
 
