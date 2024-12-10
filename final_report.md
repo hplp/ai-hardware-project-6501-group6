@@ -112,11 +112,63 @@ We test the accuracy of the quantized LeNet-5 model using the test MNIST dataset
 
 ## Hardware Part (Design Space Exploration)
 
+### Design Space Exploration
+Definition: Given a network, optimize the hardware (Systolic Array) configuration (array size, dataflow)
+
+Object: Performance (Cycles, the sim only provides the perf result)
+
+Variable/Design Space: [Array Height, Array Width, Dataflow Type]
+
+<img src="/figs/definition.png" alt="architecture" align="center" width="40%">
+
+#### Original Design Space
+
+<img src="/figs/design_space_1.png" alt="architecture" align="center" width="40%">
+
+#### AI for AI Hardware
+
+For small design space, we use Brute Force Search to do exploration. 
+
+However, for large design space, the exploration time is huge (in hours or days). Hence, we figure out two ways to improve the speed:
+
+- Searching Method: Genetic Algorithm, Simulated Annealing, etc.
+- Fast Estimation (AI For AI Hardware): We apply a proxy estimator with machine learning method (5-layer-MLP). The following graph shows the structure of Proxy Model based on the above original design space:
+
+<img src="/figs/design_space_2.png" alt="architecture" align="center" width="40%">
+
+#### Design Space Exploration Result
+- Search (Single Layer Conv, PEs=64) Result
+
+<img src="/figs/exploration_result.png" alt="architecture" align="center" width="40%">
+
+- Time Cost Result: Mins to < 1sec.
 
 
+### Dataset
 
+Sample from the simulator with random configurations. Details are shown in `proxy/dataset.py`.
 
+### Proxy Model
 
+As we mentioned above, the simulator takes too long to get the optimal result, the situation got worse when we have more design points(500k design points take 150 hours more), thus we need a proxy model to replace the simulator to get the result faster. 
 
+We use an AI model to work as proxy model, regarding the type of AI model we use, we choose MLP with 5 layers. Three reasons on that:
+- The task is a high-dimentional space function fitting task rather than classification task;
+- MLP is a smooth model and a good fit for searching;
+- MLP has a simple structure and we need this characteristic to prevent overfitting;
+<img src="/figs/5_FC_Layer_MLP.png" alt="architecture" align="center" width="40%">
+
+Here are 7 input for the model:
+- Width of systolic array;
+- Hight of systolic array;
+- Dataflow type(weight stationary, output stationary, input stationary, this parameter is in one-hot)
+- Buffersize of the systolic array;
+- M,N,K of the matrix that will do the multiplication;
+
+Only one output which is a number that represent the cycles.
+
+Below are the results for our model, we trained the model based on the dataset above, and we care about the loss between preficted value with original target value, and the relative loss based on the original target value.
+<img src="/figs/Prediction_Loss.png" alt="architecture" align="center" width="40%">
+<img src="/figs/Relative_Prediction_Loss.png" alt="architecture" align="center" width="40%">
 
 ## Conclusion
