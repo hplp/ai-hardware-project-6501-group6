@@ -168,6 +168,7 @@ Here are 7 input for the model:
 Only one output which is a number that represent the cycles.
 
 Below are the results for our model, we trained the model based on the dataset above, and we care about the loss between preficted value with original target value, and the relative loss based on the original target value.
+
 <img src="/figs/Prediction_Loss.png" alt="architecture" align="center" width="40%">
 <img src="/figs/Relative_Prediction_Loss.png" alt="architecture" align="center" width="40%">
 
