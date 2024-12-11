@@ -88,7 +88,11 @@ configuration for different CNNs (that is design space exploration).
 
 ## Part1: Software, Quantization
 
-We select a typical and popular model **LeNet-5** for this project. The application is hand-written digit recognition.
+Quantization means reducing the bit-width of the model. For example, using 8 bits integer for the weights and activatons.
+
+The CNNs are robust to data precisions. We will show later that CNNs will maintain high accuarcy with low bit width. 
+
+We select a typical and popular model **LeNet-5** for this part. The application is hand-written digit recognition.
 
 #### Training for LeNet-5 Neural Network
 
