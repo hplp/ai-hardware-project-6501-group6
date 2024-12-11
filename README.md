@@ -62,7 +62,6 @@ conda install pandas pillow matplotlib
 For scalesim, we have tested a stable version. Use `git submodule` to download.
 
 ```shell
-# scalesim. Use git submodule or 
 git submodule update --init --recursive
 cd scale-sim-v2
 python3 setup.py install
@@ -209,7 +208,7 @@ python3 test.py
 
 - Search (Single Layer Conv, PEs=64) Result
 
-<img src="/figs/exploration_result.png" alt="architecture" align="center" width="40%">
+<img src="/figs/exploration_result.png" alt="dse result" align="center">
 
 - Time Cost Result: Mins to < 1sec.
 
