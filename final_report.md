@@ -1,25 +1,69 @@
-# Final Project Report
+# Project Report
 
-## Team Name
+## Team
+
+#### Team Name
 6501-Group 6
 
-## Team Members
+#### Team Members
 - Peilin Chen
 - Xinyuan Fu
 - Hanyuan Gao
 - Feilian Dai
 
-## Project Title
+## Project Information
+
+#### Project Title
 
 Design Space Exploration for Compressed Deep Convolutional Neural Network on SCALE Sim
 
-## Project Description
+#### Project Description
 
 Quantize convolutional neural network (convolutional layer and feedforward layer) into low-bit and deploy it on the open source 
 platform Systolic CNN AcceLErator Simulator (SCALE Sim) using the best hardware configurations obtained by our design 
 space exploration method. 
 
-## SCALE Sim
+#### Key Objectives
+
+- Quantize convolutional layer and feedforward layer
+- Design space exploration
+- Depoly the quantized model onto SCALE Sim with the optimal hardware configurations and show the effectiveness of our method
+
+#### Technology Stack
+
+System: Windows and linux systems should all work.
+
+Hardware platform: Systolic CNN AcceLErator Simulator (SCALE Sim).
+
+Software tools: Pytorch, Ubuntu, and SCALE Sim.
+
+Language: Python, Shell.
+
+#### Requirements
+
+We are using pytorch for CNN training.
+
+```shell
+cd  ai-hardware-project-6501-group6
+# conda is recommended.
+# Download Pytorch. GPU is optional and not required.
+conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+# Other module. Pull the newest version.
+conda install pandas pillow matplotlib
+```
+
+For scalesim, we have tested a stable version. Use `git submodule` to download.
+
+```shell
+# scalesim. Use git submodule or 
+git submodule update --init --recursive
+cd scale-sim-v2
+pip install scalesim
+```
+
+Or you can refer to scale-sim-v2 documantation.
+
+## Hardware Platform: SCALE Sim
 
 SCALE Sim is a simulator for systolic array based accelerators for neural network layers that use General Matrix Multiplications (GEMMs). 
 The overall architecture is shown below.
@@ -35,11 +79,11 @@ The SCALE Sim supports the computation of 8-bit GEMM. So we first try to quantiz
 it is difficult to achieve the best inference performance for a specific CNN given the fixed hardware, we plan to explore the optimal SCALE Sim hardware 
 configuration for different CNNs (that is design space exploration).
 
-## Software Part (Quantization)
+## Part1: Software, Quantization
 
 We select a typical and popular model **LeNet-5** for this project. The application is hand-written digit recognition.
 
-### Training for LeNet-5 Neural Network
+#### Training for LeNet-5 Neural Network
 
 The LeNet-5 structure is shown below.
 
@@ -99,7 +143,7 @@ We first define the LeNet-5 neural network structure using Pytorch library in ne
 The first figure depicts the training loss and validation loss during the 50 training epoches. The second figure depicts the training accuracy and validation
 accuracy during the 50 training epoches. The best accuracy achieved by our trained LeNet-5 model is 98.56%.
 
-### Quantization
+#### Quantization
 
 We use linear asymmetric quantization method to quantize the LeNet-5 NN into 8bit. QuantLinear, QuantConv2d, and QuantAvePool2d functions 
 are defined in net_quant.py. The quant.py will utilize the net_quant.py to quantize the trained LeNet-5 NN and save the int8 parameters in *.txt. 
@@ -110,9 +154,10 @@ Quantized parameters can be found in the **weight** folder. After finishing the 
 
 We test the accuracy of the quantized LeNet-5 model using the test MNIST dataset. The testing result is shown above. We can observe that compared to the original LeNet-5 model, the quantized int8 LeNet-5 model achieves no accuracy loss (even higher than the original model in floating point datatype).
 
-## Hardware Part (Design Space Exploration)
+## Part2: Hardware, Design Space Exploration
 
-### Design Space Exploration
+#### Design Space Exploration
+
 Definition: Given a network, optimize the hardware (Systolic Array) configuration (array size, dataflow)
 
 Object: Performance (Cycles, the sim only provides the perf result)
@@ -121,9 +166,11 @@ Variable/Design Space: [Array Height, Array Width, Dataflow Type]
 
 <img src="/figs/definition.png" alt="architecture" align="center" width="40%">
 
-#### Original Design Space
+#### Overview
 
-<img src="/figs/design_space_1.png" alt="architecture" align="center" width="40%">
+<p align="center">
+  <img src="/figs/design_space_1.png" alt="dse" width="50%">
+</p>
 
 #### AI for AI Hardware
 
@@ -134,9 +181,17 @@ However, for large design space, the exploration time is huge (in hours or days)
 - Searching Method: Genetic Algorithm, Simulated Annealing, etc.
 - Fast Estimation (AI For AI Hardware): We apply a proxy estimator with machine learning method (5-layer-MLP). The following graph shows the structure of Proxy Model based on the above original design space:
 
-<img src="/figs/design_space_2.png" alt="architecture" align="center" width="40%">
+<p align="center">
+  <img src="/figs/design_space_2.png" alt="dse proxy" width="60%">
+</p>
 
 #### Design Space Exploration Result
+
+```python
+cd dse
+python3 test.py
+```
+
 - Search (Single Layer Conv, PEs=64) Result
 
 <img src="/figs/exploration_result.png" alt="architecture" align="center" width="40%">
@@ -144,11 +199,16 @@ However, for large design space, the exploration time is huge (in hours or days)
 - Time Cost Result: Mins to < 1sec.
 
 
-### Dataset
+#### Dataset for the proxy
 
 Sample from the simulator with random configurations. Details are shown in `proxy/dataset.py`.
 
-### Proxy Model
+```python
+cd proxy
+python3 dataset.py
+```
+
+#### Proxy Model
 
 As we mentioned above, the simulator takes too long to get the optimal result, the situation got worse when we have more design points(500k design points take 150 hours more), thus we need a proxy model to replace the simulator to get the result faster. 
 
@@ -169,6 +229,8 @@ Here are 7 input for the model:
 - M,N,K of the matrix that will do the multiplication;
 
 Only one output which is a number that represent the cycles.
+
+Refer to `proxy\MLP_bench_Nov28-relative.ipynb` for more details.
 
 Below are the results for our model, we trained the model based on the dataset above, and we care about the loss between preficted value with original target value, and the relative loss based on the original target value.
 
