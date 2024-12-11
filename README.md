@@ -65,10 +65,14 @@ For scalesim, we have tested a stable version. Use `git submodule` to download.
 # scalesim. Use git submodule or 
 git submodule update --init --recursive
 cd scale-sim-v2
-pip install scalesim
+python3 setup.py install
 ```
 
 Or you can refer to scale-sim-v2 documantation.
+
+```
+pip3 install scalesim
+```
 
 ## Hardware Platform: SCALE Sim
 
