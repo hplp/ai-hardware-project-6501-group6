@@ -10,6 +10,7 @@ topology_file = 'test.csv'
 config_file = 'test.cfg'
 logpath = 'test_runs'
 gemm_input = 'conv'
+module = '../proxy/model_1_trained.pth'
 
 pe_num = 64
 bandwidth = 10

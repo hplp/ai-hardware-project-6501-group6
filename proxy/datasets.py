@@ -93,4 +93,4 @@ with tqdm.tqdm(total=total_iterations, desc="Combined Progress") as pbar:
                                     pbar.update(1)
                                     if pbar.n % 5000 == 0:
                                         results.to_csv('dataset.csv', index=False)
-results.to_csv('dataset.csv')
+results.to_csv('dataset.csv', index=False)
